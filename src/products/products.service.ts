@@ -12,6 +12,9 @@ export class ProductsService {
     
     async getProducts(page: number, limit: number): Promise<Products[]>{
         let products = await this.productsRepository.find({
+            order: {
+                name: "ASC"
+            },
             relations: {
                 category: true,
             }
