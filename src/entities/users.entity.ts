@@ -58,6 +58,11 @@ export class Users {
     city: string
 
     @Column({
+        type: "string"
+    })
+    birthdate: string
+
+    @Column({
         type: "boolean",
         default: false
     })

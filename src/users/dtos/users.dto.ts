@@ -69,6 +69,10 @@ export class CreateUserDto {
     @MaxLength(20)
     city: string
 
+    @IsNotEmpty()
+    @IsString()
+    birthdate: string
+
     @IsEmpty()
     @ApiHideProperty()
     isAdmin?: boolean
